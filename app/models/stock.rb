@@ -14,12 +14,12 @@ class Stock < ApplicationRecord
             # client.price(ticker_symbol)
         begin
             new(ticker: ticker_symbol, name: client.company(ticker_symbol).company_name, last_price: client.price(ticker_symbol))
-            puts "!!!!!--work"   
+            # puts "!!!!!--work"   
 
-            rescue => exception
-                puts "log:---------------------------------------------------------------" 
-                puts exception           
-                return nil
+        rescue => exception
+                # puts "log:---------------------------------------------------------------" 
+                # puts exception           
+            return nil
 
         end
 
