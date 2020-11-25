@@ -3,7 +3,9 @@
 <div class='search-area'>
   <h3>Search Stocks</h3>
     <%# <%= form_tag '#', method: :get do %>
-    <%= form_tag search_stock_path, method: :get do %>
+    <%# <%= form_tag search_stock_path, method: :get do %>
+    <%= form_tag search_stock_path, remote: true, method: :get do %>
+      <%# remote: true --> allow the Unobtrusive JavaScript drivers to control the submit behavior %>
         <div class="form-group row">
             <div class="col-sm-9 no-right-padding">
             <%= text_field_tag :stock, params[:stock], placeholder: "Stock ticker symbol", autofocus: true, class: "form-control form-control-lg" %>
@@ -16,12 +18,18 @@
         </div>
         <% end %>
 </div> 
-<% if @stock %>
-  <div class="card card-header results-block">
-    <strong>Symbol: </strong> <%= @stock.ticker %>
-    <strong>Name: </strong> <%= @stock.name %>
-    <strong>Price: </strong> <%= @stock.last_price %>
-  </div>
-<% end %> 
+
+
+
+<%# <% if @stock %> 
+  <%# <div class="card card-header results-block"> %>
+    <%# <strong>Symbol: </strong> <%= @stock.ticker %> 
+    <%# <strong>Name: </strong> <%= @stock.name %> 
+    <%# <strong>Price: </strong> <%= @stock.last_price %> 
+  <%# </div> %>
+<%# <% end %>  
+
+<div id="results"></div>
+
 
 
