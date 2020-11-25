@@ -26,8 +26,12 @@ gem 'jbuilder', '~> 2.7'
 gem 'devise'
 gem 'devise-bootstrap-views', '~> 1.0'
 
-#api
+#257-258: api
 gem 'iex-ruby-client'
+
+#259: font-end struction
+gem "font-awesome-rails"
+
 
 
 # Use Active Storage variant
