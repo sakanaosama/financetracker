@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :user_stocks
   # auto added by 'rails g controller'
   # get 'users/my_portfolio'
 
