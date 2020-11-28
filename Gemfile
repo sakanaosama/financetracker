@@ -32,6 +32,7 @@ gem 'iex-ruby-client'
 #259: font-end struction
 gem "font-awesome-rails"
 
+gem 'hirb'
 
 
 # Use Active Storage variant
